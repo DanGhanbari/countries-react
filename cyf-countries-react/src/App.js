@@ -1,9 +1,15 @@
-import './App.css';
+import data from "./countriesAll.json";
 
-function App() {
+
+const App = () => {
+
+  function numberWithCommas(x) {
+    return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
   return (
     <div>
-      Hi
+      {data.map((x)=><ul key={x.index}><li>{x.name} </li><li>{numberWithCommas(x.population)}</li></ul>)}
     </div>
   );
 }
