@@ -8,7 +8,7 @@ const Cards = () => {
     }
     return (
         <div>
-               {data.map((x)=><ul key={x.index} className="bg-light p-2">
+               {data.map((x,key)=><ul key={key} className="bg-light p-2">
         <li><img src={x.flag} alt="countries flag"></img></li>
         <li className="pb-3 pt-2 font-weight-bold">{x.name} </li>
         <li>Population: {numberWithCommas(x.population)}</li>
